@@ -1,0 +1,966 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F5A23AAE2812EB7A004AACC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A23AAD2812EB7A004AACC7 /* AppDelegate.swift */; };
+		F5A23AB02812EB7A004AACC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A23AAF2812EB7A004AACC7 /* SceneDelegate.swift */; };
+		F5A23AB32812EB7A004AACC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5A23AB12812EB7A004AACC7 /* LaunchScreen.storyboard */; };
+		F5A23AB62812EB7A004AACC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5A23AB42812EB7A004AACC7 /* Main.storyboard */; };
+		F5A23ABF2812EB7A004AACC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A23ABE2812EB7A004AACC7 /* AppDelegate.swift */; };
+		F5A23AC22812EB7A004AACC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5A23AC02812EB7A004AACC7 /* Main.storyboard */; };
+		F5A23AC92812EB7A004AACC7 /* CCF-Rank Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F5A23AC82812EB7A004AACC7 /* CCF-Rank Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F5A23AD32812EB7A004AACC7 /* CCF-Rank Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F5A23AD22812EB7A004AACC7 /* CCF-Rank Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F5A23AD92812EB7A004AACC7 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = F5A23A942812EB74004AACC7 /* Main.html */; };
+		F5A23ADA2812EB7A004AACC7 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = F5A23A942812EB74004AACC7 /* Main.html */; };
+		F5A23ADB2812EB7A004AACC7 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F5A23A962812EB74004AACC7 /* Icon.png */; };
+		F5A23ADC2812EB7A004AACC7 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F5A23A962812EB74004AACC7 /* Icon.png */; };
+		F5A23ADD2812EB7A004AACC7 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = F5A23A972812EB74004AACC7 /* Style.css */; };
+		F5A23ADE2812EB7A004AACC7 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = F5A23A972812EB74004AACC7 /* Style.css */; };
+		F5A23ADF2812EB7A004AACC7 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = F5A23A982812EB74004AACC7 /* Script.js */; };
+		F5A23AE02812EB7A004AACC7 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = F5A23A982812EB74004AACC7 /* Script.js */; };
+		F5A23AE12812EB7A004AACC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A23A992812EB74004AACC7 /* ViewController.swift */; };
+		F5A23AE22812EB7A004AACC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A23A992812EB74004AACC7 /* ViewController.swift */; };
+		F5A23AE32812EB7A004AACC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5A23A9A2812EB79004AACC7 /* Assets.xcassets */; };
+		F5A23AE42812EB7A004AACC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5A23A9A2812EB79004AACC7 /* Assets.xcassets */; };
+		F5A23AE52812EB7A004AACC7 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A23A9C2812EB79004AACC7 /* SafariWebExtensionHandler.swift */; };
+		F5A23AE62812EB7A004AACC7 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A23A9C2812EB79004AACC7 /* SafariWebExtensionHandler.swift */; };
+		F5A23AE72812EB7A004AACC7 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = F5A23A9E2812EB79004AACC7 /* _locales */; };
+		F5A23AE82812EB7A004AACC7 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = F5A23A9E2812EB79004AACC7 /* _locales */; };
+		F5A23AE92812EB7A004AACC7 /* images in Resources */ = {isa = PBXBuildFile; fileRef = F5A23A9F2812EB79004AACC7 /* images */; };
+		F5A23AEA2812EB7A004AACC7 /* images in Resources */ = {isa = PBXBuildFile; fileRef = F5A23A9F2812EB79004AACC7 /* images */; };
+		F5A23AEB2812EB7A004AACC7 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = F5A23AA02812EB79004AACC7 /* manifest.json */; };
+		F5A23AEC2812EB7A004AACC7 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = F5A23AA02812EB79004AACC7 /* manifest.json */; };
+		F5A23AED2812EB7A004AACC7 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = F5A23AA12812EB79004AACC7 /* background.js */; };
+		F5A23AEE2812EB7A004AACC7 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = F5A23AA12812EB79004AACC7 /* background.js */; };
+		F5A23AEF2812EB7A004AACC7 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = F5A23AA22812EB79004AACC7 /* content.js */; };
+		F5A23AF02812EB7A004AACC7 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = F5A23AA22812EB79004AACC7 /* content.js */; };
+		F5A23AF12812EB7A004AACC7 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = F5A23AA32812EB79004AACC7 /* popup.html */; };
+		F5A23AF22812EB7A004AACC7 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = F5A23AA32812EB79004AACC7 /* popup.html */; };
+		F5A23AF32812EB7A004AACC7 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = F5A23AA42812EB79004AACC7 /* popup.css */; };
+		F5A23AF42812EB7A004AACC7 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = F5A23AA42812EB79004AACC7 /* popup.css */; };
+		F5A23AF52812EB7A004AACC7 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = F5A23AA52812EB79004AACC7 /* popup.js */; };
+		F5A23AF62812EB7A004AACC7 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = F5A23AA52812EB79004AACC7 /* popup.js */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F5A23ACA2812EB7A004AACC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5A23A8E2812EB74004AACC7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5A23AC72812EB7A004AACC7;
+			remoteInfo = "CCF-Rank Extension (iOS)";
+		};
+		F5A23AD42812EB7A004AACC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5A23A8E2812EB74004AACC7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5A23AD12812EB7A004AACC7;
+			remoteInfo = "CCF-Rank Extension (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F5A23AFC2812EB7A004AACC7 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F5A23AC92812EB7A004AACC7 /* CCF-Rank Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5A23B032812EB7A004AACC7 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F5A23AD32812EB7A004AACC7 /* CCF-Rank Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F5A23A952812EB74004AACC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
+		F5A23A962812EB74004AACC7 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		F5A23A972812EB74004AACC7 /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		F5A23A982812EB74004AACC7 /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		F5A23A992812EB74004AACC7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F5A23A9A2812EB79004AACC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5A23A9C2812EB79004AACC7 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		F5A23A9E2812EB79004AACC7 /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _locales; sourceTree = "<group>"; };
+		F5A23A9F2812EB79004AACC7 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
+		F5A23AA02812EB79004AACC7 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
+		F5A23AA12812EB79004AACC7 /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
+		F5A23AA22812EB79004AACC7 /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = content.js; sourceTree = "<group>"; };
+		F5A23AA32812EB79004AACC7 /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = popup.html; sourceTree = "<group>"; };
+		F5A23AA42812EB79004AACC7 /* popup.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = popup.css; sourceTree = "<group>"; };
+		F5A23AA52812EB79004AACC7 /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = popup.js; sourceTree = "<group>"; };
+		F5A23AAA2812EB7A004AACC7 /* CCF-Rank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CCF-Rank.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5A23AAD2812EB7A004AACC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F5A23AAF2812EB7A004AACC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F5A23AB22812EB7A004AACC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F5A23AB52812EB7A004AACC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F5A23AB72812EB7A004AACC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5A23ABC2812EB7A004AACC7 /* CCF-Rank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CCF-Rank.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5A23ABE2812EB7A004AACC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F5A23AC12812EB7A004AACC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F5A23AC32812EB7A004AACC7 /* CCF-Rank.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CCF-Rank.entitlements"; sourceTree = "<group>"; };
+		F5A23AC82812EB7A004AACC7 /* CCF-Rank Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "CCF-Rank Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5A23ACD2812EB7A004AACC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5A23AD22812EB7A004AACC7 /* CCF-Rank Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "CCF-Rank Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5A23AD72812EB7A004AACC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5A23AD82812EB7A004AACC7 /* CCF-Rank.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CCF-Rank.entitlements"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5A23AA72812EB7A004AACC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5A23AB92812EB7A004AACC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5A23AC52812EB7A004AACC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5A23ACF2812EB7A004AACC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F5A23A8D2812EB74004AACC7 = {
+			isa = PBXGroup;
+			children = (
+				F5A23A922812EB74004AACC7 /* Shared (App) */,
+				F5A23A9B2812EB79004AACC7 /* Shared (Extension) */,
+				F5A23AAC2812EB7A004AACC7 /* iOS (App) */,
+				F5A23ABD2812EB7A004AACC7 /* macOS (App) */,
+				F5A23ACC2812EB7A004AACC7 /* iOS (Extension) */,
+				F5A23AD62812EB7A004AACC7 /* macOS (Extension) */,
+				F5A23AAB2812EB7A004AACC7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F5A23A922812EB74004AACC7 /* Shared (App) */ = {
+			isa = PBXGroup;
+			children = (
+				F5A23A992812EB74004AACC7 /* ViewController.swift */,
+				F5A23A9A2812EB79004AACC7 /* Assets.xcassets */,
+				F5A23A932812EB74004AACC7 /* Resources */,
+			);
+			path = "Shared (App)";
+			sourceTree = "<group>";
+		};
+		F5A23A932812EB74004AACC7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F5A23A942812EB74004AACC7 /* Main.html */,
+				F5A23A962812EB74004AACC7 /* Icon.png */,
+				F5A23A972812EB74004AACC7 /* Style.css */,
+				F5A23A982812EB74004AACC7 /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F5A23A9B2812EB79004AACC7 /* Shared (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				F5A23A9C2812EB79004AACC7 /* SafariWebExtensionHandler.swift */,
+				F5A23A9D2812EB79004AACC7 /* Resources */,
+			);
+			path = "Shared (Extension)";
+			sourceTree = "<group>";
+		};
+		F5A23A9D2812EB79004AACC7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F5A23A9E2812EB79004AACC7 /* _locales */,
+				F5A23A9F2812EB79004AACC7 /* images */,
+				F5A23AA02812EB79004AACC7 /* manifest.json */,
+				F5A23AA12812EB79004AACC7 /* background.js */,
+				F5A23AA22812EB79004AACC7 /* content.js */,
+				F5A23AA32812EB79004AACC7 /* popup.html */,
+				F5A23AA42812EB79004AACC7 /* popup.css */,
+				F5A23AA52812EB79004AACC7 /* popup.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F5A23AAB2812EB7A004AACC7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5A23AAA2812EB7A004AACC7 /* CCF-Rank.app */,
+				F5A23ABC2812EB7A004AACC7 /* CCF-Rank.app */,
+				F5A23AC82812EB7A004AACC7 /* CCF-Rank Extension.appex */,
+				F5A23AD22812EB7A004AACC7 /* CCF-Rank Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5A23AAC2812EB7A004AACC7 /* iOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				F5A23AAD2812EB7A004AACC7 /* AppDelegate.swift */,
+				F5A23AAF2812EB7A004AACC7 /* SceneDelegate.swift */,
+				F5A23AB12812EB7A004AACC7 /* LaunchScreen.storyboard */,
+				F5A23AB42812EB7A004AACC7 /* Main.storyboard */,
+				F5A23AB72812EB7A004AACC7 /* Info.plist */,
+			);
+			path = "iOS (App)";
+			sourceTree = "<group>";
+		};
+		F5A23ABD2812EB7A004AACC7 /* macOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				F5A23ABE2812EB7A004AACC7 /* AppDelegate.swift */,
+				F5A23AC02812EB7A004AACC7 /* Main.storyboard */,
+				F5A23AC32812EB7A004AACC7 /* CCF-Rank.entitlements */,
+			);
+			path = "macOS (App)";
+			sourceTree = "<group>";
+		};
+		F5A23ACC2812EB7A004AACC7 /* iOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				F5A23ACD2812EB7A004AACC7 /* Info.plist */,
+			);
+			path = "iOS (Extension)";
+			sourceTree = "<group>";
+		};
+		F5A23AD62812EB7A004AACC7 /* macOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				F5A23AD72812EB7A004AACC7 /* Info.plist */,
+				F5A23AD82812EB7A004AACC7 /* CCF-Rank.entitlements */,
+			);
+			path = "macOS (Extension)";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F5A23AA92812EB7A004AACC7 /* CCF-Rank (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5A23AFD2812EB7A004AACC7 /* Build configuration list for PBXNativeTarget "CCF-Rank (iOS)" */;
+			buildPhases = (
+				F5A23AA62812EB7A004AACC7 /* Sources */,
+				F5A23AA72812EB7A004AACC7 /* Frameworks */,
+				F5A23AA82812EB7A004AACC7 /* Resources */,
+				F5A23AFC2812EB7A004AACC7 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5A23ACB2812EB7A004AACC7 /* PBXTargetDependency */,
+			);
+			name = "CCF-Rank (iOS)";
+			productName = "CCF-Rank (iOS)";
+			productReference = F5A23AAA2812EB7A004AACC7 /* CCF-Rank.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F5A23ABB2812EB7A004AACC7 /* CCF-Rank (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5A23B042812EB7A004AACC7 /* Build configuration list for PBXNativeTarget "CCF-Rank (macOS)" */;
+			buildPhases = (
+				F5A23AB82812EB7A004AACC7 /* Sources */,
+				F5A23AB92812EB7A004AACC7 /* Frameworks */,
+				F5A23ABA2812EB7A004AACC7 /* Resources */,
+				F5A23B032812EB7A004AACC7 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5A23AD52812EB7A004AACC7 /* PBXTargetDependency */,
+			);
+			name = "CCF-Rank (macOS)";
+			productName = "CCF-Rank (macOS)";
+			productReference = F5A23ABC2812EB7A004AACC7 /* CCF-Rank.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F5A23AC72812EB7A004AACC7 /* CCF-Rank Extension (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5A23AF92812EB7A004AACC7 /* Build configuration list for PBXNativeTarget "CCF-Rank Extension (iOS)" */;
+			buildPhases = (
+				F5A23AC42812EB7A004AACC7 /* Sources */,
+				F5A23AC52812EB7A004AACC7 /* Frameworks */,
+				F5A23AC62812EB7A004AACC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CCF-Rank Extension (iOS)";
+			productName = "CCF-Rank Extension (iOS)";
+			productReference = F5A23AC82812EB7A004AACC7 /* CCF-Rank Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		F5A23AD12812EB7A004AACC7 /* CCF-Rank Extension (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5A23B002812EB7A004AACC7 /* Build configuration list for PBXNativeTarget "CCF-Rank Extension (macOS)" */;
+			buildPhases = (
+				F5A23ACE2812EB7A004AACC7 /* Sources */,
+				F5A23ACF2812EB7A004AACC7 /* Frameworks */,
+				F5A23AD02812EB7A004AACC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CCF-Rank Extension (macOS)";
+			productName = "CCF-Rank Extension (macOS)";
+			productReference = F5A23AD22812EB7A004AACC7 /* CCF-Rank Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5A23A8E2812EB74004AACC7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					F5A23AA92812EB7A004AACC7 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					F5A23ABB2812EB7A004AACC7 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					F5A23AC72812EB7A004AACC7 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					F5A23AD12812EB7A004AACC7 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+				};
+			};
+			buildConfigurationList = F5A23A912812EB74004AACC7 /* Build configuration list for PBXProject "CCF-Rank" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F5A23A8D2812EB74004AACC7;
+			productRefGroup = F5A23AAB2812EB7A004AACC7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5A23AA92812EB7A004AACC7 /* CCF-Rank (iOS) */,
+				F5A23ABB2812EB7A004AACC7 /* CCF-Rank (macOS) */,
+				F5A23AC72812EB7A004AACC7 /* CCF-Rank Extension (iOS) */,
+				F5A23AD12812EB7A004AACC7 /* CCF-Rank Extension (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5A23AA82812EB7A004AACC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5A23ADB2812EB7A004AACC7 /* Icon.png in Resources */,
+				F5A23AB32812EB7A004AACC7 /* LaunchScreen.storyboard in Resources */,
+				F5A23AD92812EB7A004AACC7 /* Main.html in Resources */,
+				F5A23ADF2812EB7A004AACC7 /* Script.js in Resources */,
+				F5A23AE32812EB7A004AACC7 /* Assets.xcassets in Resources */,
+				F5A23AB62812EB7A004AACC7 /* Main.storyboard in Resources */,
+				F5A23ADD2812EB7A004AACC7 /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5A23ABA2812EB7A004AACC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5A23ADC2812EB7A004AACC7 /* Icon.png in Resources */,
+				F5A23ADE2812EB7A004AACC7 /* Style.css in Resources */,
+				F5A23AC22812EB7A004AACC7 /* Main.storyboard in Resources */,
+				F5A23AE02812EB7A004AACC7 /* Script.js in Resources */,
+				F5A23AE42812EB7A004AACC7 /* Assets.xcassets in Resources */,
+				F5A23ADA2812EB7A004AACC7 /* Main.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5A23AC62812EB7A004AACC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5A23AED2812EB7A004AACC7 /* background.js in Resources */,
+				F5A23AF32812EB7A004AACC7 /* popup.css in Resources */,
+				F5A23AF12812EB7A004AACC7 /* popup.html in Resources */,
+				F5A23AE92812EB7A004AACC7 /* images in Resources */,
+				F5A23AEB2812EB7A004AACC7 /* manifest.json in Resources */,
+				F5A23AE72812EB7A004AACC7 /* _locales in Resources */,
+				F5A23AEF2812EB7A004AACC7 /* content.js in Resources */,
+				F5A23AF52812EB7A004AACC7 /* popup.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5A23AD02812EB7A004AACC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5A23AEE2812EB7A004AACC7 /* background.js in Resources */,
+				F5A23AF42812EB7A004AACC7 /* popup.css in Resources */,
+				F5A23AF22812EB7A004AACC7 /* popup.html in Resources */,
+				F5A23AEA2812EB7A004AACC7 /* images in Resources */,
+				F5A23AEC2812EB7A004AACC7 /* manifest.json in Resources */,
+				F5A23AE82812EB7A004AACC7 /* _locales in Resources */,
+				F5A23AF02812EB7A004AACC7 /* content.js in Resources */,
+				F5A23AF62812EB7A004AACC7 /* popup.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5A23AA62812EB7A004AACC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5A23AE12812EB7A004AACC7 /* ViewController.swift in Sources */,
+				F5A23AAE2812EB7A004AACC7 /* AppDelegate.swift in Sources */,
+				F5A23AB02812EB7A004AACC7 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5A23AB82812EB7A004AACC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5A23AE22812EB7A004AACC7 /* ViewController.swift in Sources */,
+				F5A23ABF2812EB7A004AACC7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5A23AC42812EB7A004AACC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5A23AE52812EB7A004AACC7 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5A23ACE2812EB7A004AACC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5A23AE62812EB7A004AACC7 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F5A23ACB2812EB7A004AACC7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5A23AC72812EB7A004AACC7 /* CCF-Rank Extension (iOS) */;
+			targetProxy = F5A23ACA2812EB7A004AACC7 /* PBXContainerItemProxy */;
+		};
+		F5A23AD52812EB7A004AACC7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5A23AD12812EB7A004AACC7 /* CCF-Rank Extension (macOS) */;
+			targetProxy = F5A23AD42812EB7A004AACC7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F5A23A942812EB74004AACC7 /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5A23A952812EB74004AACC7 /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		F5A23AB12812EB7A004AACC7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5A23AB22812EB7A004AACC7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F5A23AB42812EB7A004AACC7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5A23AB52812EB7A004AACC7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F5A23AC02812EB7A004AACC7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5A23AC12812EB7A004AACC7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F5A23AF72812EB7A004AACC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F5A23AF82812EB7A004AACC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		F5A23AFA2812EB7A004AACC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C2A3XCXCZS;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "CCF-Rank Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "LSX-s-Software.CCF-Rank.Extension";
+				PRODUCT_NAME = "CCF-Rank Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F5A23AFB2812EB7A004AACC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C2A3XCXCZS;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "CCF-Rank Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "LSX-s-Software.CCF-Rank.Extension";
+				PRODUCT_NAME = "CCF-Rank Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F5A23AFE2812EB7A004AACC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C2A3XCXCZS;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "CCF-Rank";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "LSX-s-Software.CCF-Rank";
+				PRODUCT_NAME = "CCF-Rank";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F5A23AFF2812EB7A004AACC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C2A3XCXCZS;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "CCF-Rank";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "LSX-s-Software.CCF-Rank";
+				PRODUCT_NAME = "CCF-Rank";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F5A23B012812EB7A004AACC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/CCF-Rank.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C2A3XCXCZS;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "CCF-Rank Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "LSX-s-Software.CCF-Rank.Extension";
+				PRODUCT_NAME = "CCF-Rank Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F5A23B022812EB7A004AACC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/CCF-Rank.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C2A3XCXCZS;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "CCF-Rank Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "LSX-s-Software.CCF-Rank.Extension";
+				PRODUCT_NAME = "CCF-Rank Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F5A23B052812EB7A004AACC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "macOS (App)/CCF-Rank.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C2A3XCXCZS;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "CCF-Rank";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "LSX-s-Software.CCF-Rank";
+				PRODUCT_NAME = "CCF-Rank";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F5A23B062812EB7A004AACC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "macOS (App)/CCF-Rank.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C2A3XCXCZS;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "CCF-Rank";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "LSX-s-Software.CCF-Rank";
+				PRODUCT_NAME = "CCF-Rank";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5A23A912812EB74004AACC7 /* Build configuration list for PBXProject "CCF-Rank" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5A23AF72812EB7A004AACC7 /* Debug */,
+				F5A23AF82812EB7A004AACC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5A23AF92812EB7A004AACC7 /* Build configuration list for PBXNativeTarget "CCF-Rank Extension (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5A23AFA2812EB7A004AACC7 /* Debug */,
+				F5A23AFB2812EB7A004AACC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5A23AFD2812EB7A004AACC7 /* Build configuration list for PBXNativeTarget "CCF-Rank (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5A23AFE2812EB7A004AACC7 /* Debug */,
+				F5A23AFF2812EB7A004AACC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5A23B002812EB7A004AACC7 /* Build configuration list for PBXNativeTarget "CCF-Rank Extension (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5A23B012812EB7A004AACC7 /* Debug */,
+				F5A23B022812EB7A004AACC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5A23B042812EB7A004AACC7 /* Build configuration list for PBXNativeTarget "CCF-Rank (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5A23B052812EB7A004AACC7 /* Debug */,
+				F5A23B062812EB7A004AACC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5A23A8E2812EB74004AACC7 /* Project object */;
+}
