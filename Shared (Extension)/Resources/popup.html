@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="popup.css">
-    <script type="module" src="popup.js"></script>
+    <script src="ccf.js"></script>
+    <script src="ccf-index.js"></script>
+    <script src="ccf-rank.js"></script>
 </head>
+
 <body>
-    <strong>Hello World!</strong>
+    <h1>查询CCF等级</h1>
+    <h2>输入会议、期刊的全名或简称来查询其等级</h2>
+    <form class="flexbox">
+        <input type="text" id="input" />
+        <button id="search" type="submit">查询</button>
+    </form>
+    <div id="result"></div>
+    <script type="module" src="popup.js"></script>
 </body>
+
 </html>

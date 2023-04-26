@@ -47,9 +47,9 @@
     
     position: absolute;
     z-index: 980624;
-    bottom: 100%;
+    bottom: -100%;
     left: 50%;
-    margin-left: -60px;
+    transform: translateX(-50%);
 }
 
 .ccf-tooltip:hover .ccf-tooltiptext {

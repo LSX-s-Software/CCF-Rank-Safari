@@ -1,15 +1,55 @@
 :root {
-    color-scheme: light dark;
+  color-scheme: light dark;
 }
 
 body {
-    width: 100px;
-    padding: 10px;
+  width: 400px;
+  padding: 10px;
 
-    font-family: system-ui;
-    text-align: center;
+  font-family: system-ui;
+  text-align: center;
+}
+
+h1 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+
+h2 {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 8px 0;
+  color: gray;
+}
+
+.flexbox {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+input {
+  flex: 1;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+button {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.ccf-tooltip .ccf-tooltiptext {
+  transform: translateX(-60%);
 }
 
 @media (prefers-color-scheme: dark) {
-    /* Dark Mode styles go here. */
+  /* Dark Mode styles go here. */
 }

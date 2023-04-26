@@ -35,8 +35,6 @@
 		F5A23AEA2812EB7A004AACC7 /* images in Resources */ = {isa = PBXBuildFile; fileRef = F5A23A9F2812EB79004AACC7 /* images */; };
 		F5A23AEB2812EB7A004AACC7 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = F5A23AA02812EB79004AACC7 /* manifest.json */; };
 		F5A23AEC2812EB7A004AACC7 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = F5A23AA02812EB79004AACC7 /* manifest.json */; };
-		F5A23AED2812EB7A004AACC7 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = F5A23AA12812EB79004AACC7 /* background.js */; };
-		F5A23AEE2812EB7A004AACC7 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = F5A23AA12812EB79004AACC7 /* background.js */; };
 		F5A23AEF2812EB7A004AACC7 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = F5A23AA22812EB79004AACC7 /* content.js */; };
 		F5A23AF02812EB7A004AACC7 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = F5A23AA22812EB79004AACC7 /* content.js */; };
 		F5A23AF12812EB7A004AACC7 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = F5A23AA32812EB79004AACC7 /* popup.html */; };
@@ -124,7 +122,6 @@
 		F5A23A9E2812EB79004AACC7 /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _locales; sourceTree = "<group>"; };
 		F5A23A9F2812EB79004AACC7 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		F5A23AA02812EB79004AACC7 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
-		F5A23AA12812EB79004AACC7 /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
 		F5A23AA22812EB79004AACC7 /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = content.js; sourceTree = "<group>"; };
 		F5A23AA32812EB79004AACC7 /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = popup.html; sourceTree = "<group>"; };
 		F5A23AA42812EB79004AACC7 /* popup.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = popup.css; sourceTree = "<group>"; };
@@ -243,7 +240,6 @@
 				F5A23A9E2812EB79004AACC7 /* _locales */,
 				F5A23A9F2812EB79004AACC7 /* images */,
 				F5A23AA02812EB79004AACC7 /* manifest.json */,
-				F5A23AA12812EB79004AACC7 /* background.js */,
 				F5A23AA22812EB79004AACC7 /* content.js */,
 				F5A23AA32812EB79004AACC7 /* popup.html */,
 				F5A23AA42812EB79004AACC7 /* popup.css */,
@@ -497,7 +493,6 @@
 				F5A23B252812F0A3004AACC7 /* ccf-index.js in Resources */,
 				F5A23B132812EFC0004AACC7 /* springer.js in Resources */,
 				F5A23B192812EFC0004AACC7 /* siteUtil.js in Resources */,
-				F5A23AED2812EB7A004AACC7 /* background.js in Resources */,
 				F5A23B1B2812EFC0004AACC7 /* ieee.js in Resources */,
 				F5A23AF32812EB7A004AACC7 /* popup.css in Resources */,
 				F5A23AF12812EB7A004AACC7 /* popup.html in Resources */,
@@ -524,7 +519,6 @@
 				F5A23B262812F0A3004AACC7 /* ccf-index.js in Resources */,
 				F5A23B142812EFC0004AACC7 /* springer.js in Resources */,
 				F5A23B1A2812EFC0004AACC7 /* siteUtil.js in Resources */,
-				F5A23AEE2812EB7A004AACC7 /* background.js in Resources */,
 				F5A23B1C2812EFC0004AACC7 /* ieee.js in Resources */,
 				F5A23AF42812EB7A004AACC7 /* popup.css in Resources */,
 				F5A23AF22812EB7A004AACC7 /* popup.html in Resources */,
@@ -750,7 +744,7 @@
 				DEVELOPMENT_TEAM = C2A3XCXCZS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "CCF-Rank Extension";
+				INFOPLIST_KEY_CFBundleDisplayName = "CCF-Rank";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -781,7 +775,7 @@
 				DEVELOPMENT_TEAM = C2A3XCXCZS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "CCF-Rank Extension";
+				INFOPLIST_KEY_CFBundleDisplayName = "CCF-Rank";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
