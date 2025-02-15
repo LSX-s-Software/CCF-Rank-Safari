@@ -13,8 +13,8 @@
 		F5A23AB62812EB7A004AACC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5A23AB42812EB7A004AACC7 /* Main.storyboard */; };
 		F5A23ABF2812EB7A004AACC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A23ABE2812EB7A004AACC7 /* AppDelegate.swift */; };
 		F5A23AC22812EB7A004AACC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5A23AC02812EB7A004AACC7 /* Main.storyboard */; };
-		F5A23AC92812EB7A004AACC7 /* CCF-Rank Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F5A23AC82812EB7A004AACC7 /* CCF-Rank Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		F5A23AD32812EB7A004AACC7 /* CCF-Rank Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F5A23AD22812EB7A004AACC7 /* CCF-Rank Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F5A23AC92812EB7A004AACC7 /* CCF-Rank Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F5A23AC82812EB7A004AACC7 /* CCF-Rank Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F5A23AD32812EB7A004AACC7 /* CCF-Rank Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F5A23AD22812EB7A004AACC7 /* CCF-Rank Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F5A23AD92812EB7A004AACC7 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = F5A23A942812EB74004AACC7 /* Main.html */; };
 		F5A23ADA2812EB7A004AACC7 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = F5A23A942812EB74004AACC7 /* Main.html */; };
 		F5A23ADB2812EB7A004AACC7 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F5A23A962812EB74004AACC7 /* Icon.png */; };
@@ -87,26 +87,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		F5A23AFC2812EB7A004AACC7 /* Embed App Extensions */ = {
+		F5A23AFC2812EB7A004AACC7 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				F5A23AC92812EB7A004AACC7 /* CCF-Rank Extension.appex in Embed App Extensions */,
+				F5A23AC92812EB7A004AACC7 /* CCF-Rank Extension.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F5A23B032812EB7A004AACC7 /* Embed App Extensions */ = {
+		F5A23B032812EB7A004AACC7 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				F5A23AD32812EB7A004AACC7 /* CCF-Rank Extension.appex in Embed App Extensions */,
+				F5A23AD32812EB7A004AACC7 /* CCF-Rank Extension.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -348,7 +348,7 @@
 				F5A23AA62812EB7A004AACC7 /* Sources */,
 				F5A23AA72812EB7A004AACC7 /* Frameworks */,
 				F5A23AA82812EB7A004AACC7 /* Resources */,
-				F5A23AFC2812EB7A004AACC7 /* Embed App Extensions */,
+				F5A23AFC2812EB7A004AACC7 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -367,7 +367,7 @@
 				F5A23AB82812EB7A004AACC7 /* Sources */,
 				F5A23AB92812EB7A004AACC7 /* Frameworks */,
 				F5A23ABA2812EB7A004AACC7 /* Resources */,
-				F5A23B032812EB7A004AACC7 /* Embed App Extensions */,
+				F5A23B032812EB7A004AACC7 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -421,7 +421,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1330;
-				LastUpgradeCheck = 1330;
+				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					F5A23AA92812EB7A004AACC7 = {
 						CreatedOnToolsVersion = 13.3.1;
@@ -660,9 +660,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -718,9 +720,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -802,11 +806,10 @@
 		F5A23AFE2812EB7A004AACC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = C2A3XCXCZS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
@@ -841,11 +844,10 @@
 		F5A23AFF2812EB7A004AACC7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = C2A3XCXCZS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
@@ -884,6 +886,7 @@
 				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/CCF-Rank.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = C2A3XCXCZS;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -895,7 +898,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -916,6 +919,7 @@
 				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/CCF-Rank.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = C2A3XCXCZS;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -927,7 +931,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -945,12 +949,12 @@
 		F5A23B052812EB7A004AACC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "macOS (App)/CCF-Rank.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = C2A3XCXCZS;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -962,7 +966,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -981,12 +985,12 @@
 		F5A23B062812EB7A004AACC7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "macOS (App)/CCF-Rank.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = C2A3XCXCZS;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -998,7 +1002,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"-framework",
