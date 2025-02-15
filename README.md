@@ -4,7 +4,7 @@
 
 在论文搜索结果页面显示会议/期刊等级、支持通过手动输入会议/期刊全名/简称来查询等级的 **Safari** 扩展。
 
-目前支持在 Springer、 DBLP、IEEExplore 和 ACM DL 上显示 CCF 等级（2019）。
+目前支持在 Springer、 DBLP、IEEExplore 和 ACM DL 上显示 CCF 等级（2022）。
 
 > 本项目基于 [hnshhslsh/show-rank](https://github.com/hnshhslsh/show-rank)
 >
