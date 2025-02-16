@@ -74,35 +74,34 @@ scholar.appendRanks = function () {
 };
 
 function fetchRank(node, title, author, year) {
-  var xhr = new XMLHttpRequest();
-  api_format = "https://dblp.org/search/publ/api?q=" + encodeURIComponent(title + " " + author) + "&format=json";
-  xhr.open("GET", api_format, true);
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState == 4) {
-      var dblp_url = "";
-      var resp = JSON.parse(xhr.responseText).result.hits;
+  const api_format = `https://dblp.org/search/publ/api?q=${encodeURIComponent(title + " " + author)}&format=json`;
+  fetch(api_format)
+    .then(response => response.json())
+    .then(data => {
+      let dblp_url = "";
+      const resp = data.result.hits;
       if (resp == undefined || resp["@total"] == 0) {
-        dblp_url == "";
+        dblp_url = "";
       } else if (resp["@total"] == 1) {
-        url = resp.hit[0].info.url;
+        const url = resp.hit[0].info.url;
         dblp_url = url.substring(url.indexOf("/rec/") + 5, url.lastIndexOf("/"));
       } else {
         for (let hit of resp.hit) {
-          info = hit.info;
+          const info = hit.info;
           if (info.authors.author[0] == undefined) {
             continue;
           }
-          author_1st = info.authors.author[0].text;
-          year_fuzzy = info.year;
-          year_last_check = 0;
+          const author_1st = info.authors.author[0].text;
+          const year_fuzzy = info.year;
+          let year_last_check = 0;
           if (
             Math.abs(Number(year) - year_fuzzy) <= 1 &&
             author_1st.toLowerCase().split(" ").indexOf(author.toLowerCase()) != -1 &&
             year_fuzzy != year_last_check
           ) {
             year_last_check = year_fuzzy;
-            url = info.url;
-            dblp_url_last_check = url.substring(url.indexOf("/rec/") + 5, url.lastIndexOf("/"));
+            const url = info.url;
+            const dblp_url_last_check = url.substring(url.indexOf("/rec/") + 5, url.lastIndexOf("/"));
             if (year_fuzzy == year + 1) {
               dblp_url = dblp_url_last_check;
             } else if (year_fuzzy == year) {
@@ -120,7 +119,6 @@ function fetchRank(node, title, author, year) {
       for (let getRankSpan of scholar.rankSpanList) {
         node.insertAdjacentElement("afterend", getRankSpan(names));
       }
-    }
-  };
-  xhr.send();
+    })
+    .catch(error => console.error('Error fetching rank:', error));
 }
