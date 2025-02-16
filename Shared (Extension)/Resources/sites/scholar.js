@@ -1,20 +1,20 @@
 /**
  * Based on https://github.com/WenyanLiu/CCFrank4dblp/blob/704960f95393fdcacdd5f71864f3768518a9fb2a/js/scholar.js
- * 
+ *
  * MIT License
- * 
+ *
  * Copyright (c) 2019 wyliu
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in all
  * copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -87,28 +87,24 @@ function fetchRank(node, title, author, year) {
         dblp_url == "";
       } else if (resp["@total"] == 1) {
         url = resp.hit[0].info.url;
-        dblp_url = url.substring(
-          url.indexOf("/rec/") + 5,
-          url.lastIndexOf("/")
-        );
+        dblp_url = url.substring(url.indexOf("/rec/") + 5, url.lastIndexOf("/"));
       } else {
         for (let hit of resp.hit) {
-          info = hit.info
+          info = hit.info;
           if (info.authors.author[0] == undefined) {
             continue;
           }
           author_1st = info.authors.author[0].text;
           year_fuzzy = info.year;
           year_last_check = 0;
-          if (Math.abs(Number(year) - year_fuzzy) <= 1
-            && author_1st.toLowerCase().split(" ").indexOf(author.toLowerCase()) != -1
-            && year_fuzzy != year_last_check) {
+          if (
+            Math.abs(Number(year) - year_fuzzy) <= 1 &&
+            author_1st.toLowerCase().split(" ").indexOf(author.toLowerCase()) != -1 &&
+            year_fuzzy != year_last_check
+          ) {
             year_last_check = year_fuzzy;
             url = resp.hit[h].info.url;
-            dblp_url_last_check = url.substring(
-              url.indexOf("/rec/") + 5,
-              url.lastIndexOf("/")
-            );
+            dblp_url_last_check = url.substring(url.indexOf("/rec/") + 5, url.lastIndexOf("/"));
             if (year_fuzzy == year + 1) {
               dblp_url = dblp_url_last_check;
             } else if (year_fuzzy == year) {
@@ -117,16 +113,16 @@ function fetchRank(node, title, author, year) {
             } else {
               if (dblp_url == "") {
                 dblp_url = dblp_url_last_check;
-              };
+              }
             }
           }
         }
       }
-      const names = [{uri: dblp_url}];
+      const names = [{ uri: dblp_url }];
       for (let getRankSpan of scholar.rankSpanList) {
         $(node).after(getRankSpan(names));
       }
     }
   };
   xhr.send();
-};
+}
