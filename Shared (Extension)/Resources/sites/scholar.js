@@ -103,7 +103,7 @@ function fetchRank(node, title, author, year) {
             year_fuzzy != year_last_check
           ) {
             year_last_check = year_fuzzy;
-            url = resp.hit[h].info.url;
+            url = info.url;
             dblp_url_last_check = url.substring(url.indexOf("/rec/") + 5, url.lastIndexOf("/"));
             if (year_fuzzy == year + 1) {
               dblp_url = dblp_url_last_check;
