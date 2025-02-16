@@ -46,6 +46,9 @@ scholar.appendRank = function () {
   let elements = document.querySelectorAll("#gs_res_ccl_mid > div > div.gs_ri");
   elements.forEach(function (element) {
     let node = element.querySelector("h3 > a");
+    if (node.nextElementSibling && node.nextElementSibling.classList.contains("ccf-ranking")) {
+      return;
+    }
     let title = node.textContent.replace(/[^A-z]/g, " ");
     let data = element
       .querySelector("div.gs_a")
@@ -61,23 +64,24 @@ scholar.appendRanks = function () {
   let elements = document.querySelectorAll("tr.gsc_a_tr");
   elements.forEach(function (element) {
     let node = element.querySelector("td.gsc_a_t > a");
-    if (!node.nextElementSibling || !node.nextElementSibling.classList.contains("ccf-ranking")) {
-      let title = node.textContent.replace(/[^A-z]/g, " ");
-      let author = element
-        .querySelector("div.gs_gray")
-        .textContent.replace(/[\,\…]/g, "")
-        .split(" ")[1];
-      let year = element.querySelector("td.gsc_a_y").textContent;
-      fetchRank(node, title, author, year);
+    if (node.nextElementSibling && node.nextElementSibling.classList.contains("ccf-ranking")) {
+      return;
     }
+    let title = node.textContent.replace(/[^A-z]/g, " ");
+    let author = element
+      .querySelector("div.gs_gray")
+      .textContent.replace(/[\,\…]/g, "")
+      .split(" ")[1];
+    let year = element.querySelector("td.gsc_a_y").textContent;
+    fetchRank(node, title, author, year);
   });
 };
 
 function fetchRank(node, title, author, year) {
   const api_format = `https://dblp.org/search/publ/api?q=${encodeURIComponent(title + " " + author)}&format=json`;
   fetch(api_format)
-    .then(response => response.json())
-    .then(data => {
+    .then((response) => response.json())
+    .then((data) => {
       let dblp_url = "";
       const resp = data.result.hits;
       if (resp == undefined || resp["@total"] == 0) {
@@ -120,5 +124,5 @@ function fetchRank(node, title, author, year) {
         node.insertAdjacentElement("afterend", getRankSpan(names));
       }
     })
-    .catch(error => console.error('Error fetching rank:', error));
+    .catch((error) => console.error("Error fetching rank:", error));
 }

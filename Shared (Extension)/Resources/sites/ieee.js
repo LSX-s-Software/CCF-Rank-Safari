@@ -59,6 +59,9 @@ ieee.addRanking = function (result) {
   if (source.length != 0) {
     let names = ieee.parseNames(source);
     for (let getRankingSpan of ieee.rankingSpanProvider) {
+      if (result.nextElementSibling && result.nextElementSibling.classList.contains("ccf-ranking")) {
+        continue;
+      }
       result.insertAdjacentElement('afterend', getRankingSpan(names));
     }
   }
