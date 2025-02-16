@@ -7,14 +7,13 @@ springer.start = function () {
 };
 
 springer.addRankings = function () {
-  let results = $("#results-list > li > p.meta > span.enumeration > a");
-  results.each(function (index) {
-    let result = $(this);
-    let source = result.attr("title").trim();
+  let results = document.querySelectorAll("#results-list > li > p.meta > span.enumeration > a");
+  results.forEach(function (result) {
+    let source = result.getAttribute("title").trim();
     if (source.length != 0) {
       let names = springer.parseNames(source);
       for (let getRankingSpan of springer.rankingSpanProvider) {
-        result.before(getRankingSpan(names));
+        result.insertAdjacentElement('beforebegin', getRankingSpan(names));
       }
     }
   });

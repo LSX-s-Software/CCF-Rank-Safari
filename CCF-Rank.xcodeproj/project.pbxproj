@@ -63,8 +63,6 @@
 		F5A23B242812F0A3004AACC7 /* ccf-rank.js in Resources */ = {isa = PBXBuildFile; fileRef = F5A23B212812F0A3004AACC7 /* ccf-rank.js */; };
 		F5A23B252812F0A3004AACC7 /* ccf-index.js in Resources */ = {isa = PBXBuildFile; fileRef = F5A23B222812F0A3004AACC7 /* ccf-index.js */; };
 		F5A23B262812F0A3004AACC7 /* ccf-index.js in Resources */ = {isa = PBXBuildFile; fileRef = F5A23B222812F0A3004AACC7 /* ccf-index.js */; };
-		F5A23B292812F0F4004AACC7 /* jquery-3.3.1.min.js in Resources */ = {isa = PBXBuildFile; fileRef = F5A23B282812F0F4004AACC7 /* jquery-3.3.1.min.js */; };
-		F5A23B2A2812F0F4004AACC7 /* jquery-3.3.1.min.js in Resources */ = {isa = PBXBuildFile; fileRef = F5A23B282812F0F4004AACC7 /* jquery-3.3.1.min.js */; };
 		F5A23B2D2812F8E5004AACC7 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = F5A23B2C2812F8E5004AACC7 /* style.css */; };
 		F5A23B2E2812F8E5004AACC7 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = F5A23B2C2812F8E5004AACC7 /* style.css */; };
 /* End PBXBuildFile section */
@@ -151,7 +149,6 @@
 		F5A23B1E2812F078004AACC7 /* ccf.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ccf.js; sourceTree = "<group>"; };
 		F5A23B212812F0A3004AACC7 /* ccf-rank.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "ccf-rank.js"; sourceTree = "<group>"; };
 		F5A23B222812F0A3004AACC7 /* ccf-index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "ccf-index.js"; sourceTree = "<group>"; };
-		F5A23B282812F0F4004AACC7 /* jquery-3.3.1.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-3.3.1.min.js"; sourceTree = "<group>"; };
 		F5A23B2C2812F8E5004AACC7 /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -234,7 +231,6 @@
 			isa = PBXGroup;
 			children = (
 				F5A23B2B2812F8D2004AACC7 /* css */,
-				F5A23B272812F0E5004AACC7 /* lib */,
 				F5A23B1D2812F03D004AACC7 /* rankings */,
 				F5A23B072812EF86004AACC7 /* sites */,
 				F5A23A9E2812EB79004AACC7 /* _locales */,
@@ -320,14 +316,6 @@
 				F5A23B1E2812F078004AACC7 /* ccf.js */,
 			);
 			path = rankings;
-			sourceTree = "<group>";
-		};
-		F5A23B272812F0E5004AACC7 /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				F5A23B282812F0F4004AACC7 /* jquery-3.3.1.min.js */,
-			);
-			path = lib;
 			sourceTree = "<group>";
 		};
 		F5A23B2B2812F8D2004AACC7 /* css */ = {
@@ -508,7 +496,6 @@
 				F5A23B152812EFC0004AACC7 /* acm.js in Resources */,
 				F5A23B2D2812F8E5004AACC7 /* style.css in Resources */,
 				F5A23B0F2812EFC0004AACC7 /* scholar.js in Resources */,
-				F5A23B292812F0F4004AACC7 /* jquery-3.3.1.min.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,7 +521,6 @@
 				F5A23B162812EFC0004AACC7 /* acm.js in Resources */,
 				F5A23B2E2812F8E5004AACC7 /* style.css in Resources */,
 				F5A23B102812EFC0004AACC7 /* scholar.js in Resources */,
-				F5A23B2A2812F0F4004AACC7 /* jquery-3.3.1.min.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

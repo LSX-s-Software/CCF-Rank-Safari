@@ -4,13 +4,12 @@ dblp.rankingSpanProvider = [];
 
 dblp.start = function () {
   let pathname = window.location.pathname;
-  let title = $("head > title").text();
+  let title = document.querySelector("head > title").textContent;
   if (pathname.startsWith("/search?") || title.indexOf("Search for") != -1) {
-    let interval = setInterval(function () {
-      let message = $("#completesearch-publs > div > p.waiting");
-
-      if (message.css("display") == "none") {
-        $(window).bind("popstate", function () {
+    setInterval(function () {
+      let message = document.querySelector("#completesearch-publs > div > p.waiting");
+      if (message.style.display == "none") {
+        window.addEventListener("popstate", function () {
           dblp.addRankings();
         });
         dblp.addRankings();
@@ -40,27 +39,23 @@ dblp.getUriFromPathname = function (pathname) {
 };
 
 dblp.addRankings = function () {
-  let results = $("cite > a > span:nth-child(1) > span:nth-child(1)"); //获取期刊或会议名称
+  let results = document.querySelectorAll("cite > a > span:nth-child(1) > span:nth-child(1)"); //获取期刊或会议名称
   if (dblp.resultsCount == results.length) {
     return;
   }
   const lastResultCount = dblp.resultsCount == undefined ? 0 : dblp.resultsCount;
   dblp.resultsCount = results.length;
 
-  results.each(function (index) {
+  results.forEach(function (result, index) {
     if (index >= lastResultCount) {
-      let result = $(this);
-      let source = result
-        .text()
-        .trim()
-        .replace(/\(\d+\)/, "");
-      let url = result.parent().parent().attr("href");
+      let source = result.textContent.trim().replace(/\(\d+\)/, "");
+      let url = result.parentElement.parentElement.getAttribute("href");
       let pathname = url.substring(url.indexOf(location.hostname) + location.hostname.length);
       let uri = dblp.getUriFromPathname(pathname);
-      if (source.length != 0 && !result.next().hasClass("ccf-ranking")) {
+      if (source.length != 0 && (!result.nextElementSibling || !result.nextElementSibling.classList.contains("ccf-ranking"))) {
         for (let getRankingSpan of dblp.rankingSpanProvider) {
           let names = dblp.parseNames(source, uri);
-          result.after(getRankingSpan(names));
+          result.insertAdjacentElement('afterend', getRankingSpan(names));
         }
       }
     }
@@ -68,12 +63,12 @@ dblp.addRankings = function () {
 };
 
 dblp.addRanking = function (selector, uri) {
-  let result = $(selector);
-  let source = result.text().trim();
+  let result = document.querySelector(selector);
+  let source = result.textContent.trim();
   if (source.length != 0) {
     for (let getRankingSpan of dblp.rankingSpanProvider) {
       let names = dblp.parseNames(source, uri);
-      result.after(getRankingSpan(names));
+      result.insertAdjacentElement('afterend', getRankingSpan(names));
     }
   }
 };

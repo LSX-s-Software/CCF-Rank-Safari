@@ -34,7 +34,7 @@ scholar.run = function () {
     scholar.appendRank();
   } else if (url == "/citations") {
     setInterval(function () {
-      $(window).bind("popstate", function () {
+      window.addEventListener("popstate", function () {
         scholar.appendRanks();
       });
       scholar.appendRanks();
@@ -43,14 +43,13 @@ scholar.run = function () {
 };
 
 scholar.appendRank = function () {
-  let elements = $("#gs_res_ccl_mid > div > div.gs_ri");
-  elements.each(function () {
-    let node = $(this).find("h3 > a");
-    let title = node.text().replace(/[^A-z]/g, " ");
-    let data = $(this)
-      .find("div.gs_a")
-      .text()
-      .replace(/[\,\-\…]/g, "")
+  let elements = document.querySelectorAll("#gs_res_ccl_mid > div > div.gs_ri");
+  elements.forEach(function (element) {
+    let node = element.querySelector("h3 > a");
+    let title = node.textContent.replace(/[^A-z]/g, " ");
+    let data = element
+      .querySelector("div.gs_a")
+      .textContent.replace(/[\,\-\…]/g, "")
       .split(" ");
     let author = data[1];
     let year = data.slice(-3)[0];
@@ -59,17 +58,16 @@ scholar.appendRank = function () {
 };
 
 scholar.appendRanks = function () {
-  let elements = $("tr.gsc_a_tr");
-  elements.each(function () {
-    let node = $(this).find("td.gsc_a_t > a");
-    if (!node.next().hasClass("ccf-ranking")) {
-      let title = node.text().replace(/[^A-z]/g, " ");
-      let author = $(this)
-        .find("div.gs_gray")
-        .text()
-        .replace(/[\,\…]/g, "")
+  let elements = document.querySelectorAll("tr.gsc_a_tr");
+  elements.forEach(function (element) {
+    let node = element.querySelector("td.gsc_a_t > a");
+    if (!node.nextElementSibling || !node.nextElementSibling.classList.contains("ccf-ranking")) {
+      let title = node.textContent.replace(/[^A-z]/g, " ");
+      let author = element
+        .querySelector("div.gs_gray")
+        .textContent.replace(/[\,\…]/g, "")
         .split(" ")[1];
-      let year = $(this).find("td.gsc_a_y").text();
+      let year = element.querySelector("td.gsc_a_y").textContent;
       fetchRank(node, title, author, year);
     }
   });
@@ -120,7 +118,7 @@ function fetchRank(node, title, author, year) {
       }
       const names = [{ uri: dblp_url }];
       for (let getRankSpan of scholar.rankSpanList) {
-        $(node).after(getRankSpan(names));
+        node.insertAdjacentElement("afterend", getRankSpan(names));
       }
     }
   };

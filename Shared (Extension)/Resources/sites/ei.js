@@ -7,7 +7,7 @@ ei.start = function () {
     if (!ei.isLoading()) {
       clearInterval(interval);
       // for desktop page select
-      $("#page-nav").click(function () {
+      document.querySelector("#page-nav").addEventListener("click", function () {
         ei.start();
       });
       ei.addRankings();
@@ -17,13 +17,13 @@ ei.start = function () {
 
 ei.isLoading = function () {
   return (
-    $("#ev-loading").attr("style").indexOf("display:none") === -1 || $("#loading-results").attr("style") !== undefined
+    document.querySelector("#ev-loading").style.display !== "none" || document.querySelector("#loading-results").style !== undefined
   );
 };
 
 ei.addRankings = function () {
-  $(".source-info").each(function (index) {
-    ei.addRanking($(this));
+  document.querySelectorAll(".source-info").forEach(function (element) {
+    ei.addRanking(element);
   });
 };
 

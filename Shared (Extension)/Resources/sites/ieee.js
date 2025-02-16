@@ -10,15 +10,19 @@ ieee.start = function () {
     if (!ieee.isLoading()) {
       clearInterval(interval);
       // for desktop page select
-      $("#xplMainContent > div.ng-SearchResults.row > div.main-section > xpl-paginator a").click(function () {
-        ieee.desktopLastIndex = -1;
-        ieee.mobileLastIndex = -1;
-        ieee.start();
+      document.querySelectorAll("#xplMainContent > div.ng-SearchResults.row > div.main-section > xpl-paginator a").forEach(function (element) {
+        element.addEventListener('click', function () {
+          ieee.desktopLastIndex = -1;
+          ieee.mobileLastIndex = -1;
+          ieee.start();
+        });
       });
       // for mobile loadmore
       if (!ieee.loadMoreInited) {
         ieee.loadMoreInited = true;
-        $(".loadMore-btn").click(ieee.start);
+        document.querySelectorAll(".loadMore-btn").forEach(function (element) {
+          element.addEventListener('click', ieee.start);
+        });
       }
       ieee.addRankings();
     }
@@ -27,35 +31,35 @@ ieee.start = function () {
 
 ieee.addRankings = function () {
   // for desktop
-  $(".description > a").each(function (index) {
+  document.querySelectorAll(".description > a").forEach(function (element, index) {
     if (index > ieee.desktopLastIndex) {
       ieee.desktopLastIndex = index;
-      ieee.addRanking($(this));
+      ieee.addRanking(element);
     }
   });
   // for mobile
-  $(".description > div:nth-child(1) > a").each(function (index) {
+  document.querySelectorAll(".description > div:nth-child(1) > a").forEach(function (element, index) {
     if (index > ieee.mobileLastIndex) {
       ieee.mobileLastIndex = index;
-      ieee.addRanking($(this));
+      ieee.addRanking(element);
     }
   });
 };
 
 ieee.isLoading = function () {
   return (
-    $(".List-results-message").text().trim() == "Getting results..." ||
-    $("xpl-progress-spinner").text().trim() == "Getting results..." ||
-    $(".loadMore-btn > span.fa-spinner").length == 1
+    document.querySelector(".List-results-message")?.textContent.trim() == "Getting results..." ||
+    document.querySelector("xpl-progress-spinner")?.textContent.trim() == "Getting results..." ||
+    document.querySelector(".loadMore-btn > span.fa-spinner") != null
   );
 };
 
 ieee.addRanking = function (result) {
-  let source = result.text().trim();
+  let source = result.textContent.trim();
   if (source.length != 0) {
     let names = ieee.parseNames(source);
     for (let getRankingSpan of ieee.rankingSpanProvider) {
-      result.before(getRankingSpan(names));
+      result.insertAdjacentElement('afterend', getRankingSpan(names));
     }
   }
 };

@@ -7,14 +7,13 @@ acm.start = function () {
 };
 
 acm.addRankings = function () {
-  let results = $(".issue-item__detail > a");
-  results.each(function (index) {
-    let result = $(this);
-    let source = result.text().trim();
+  let results = document.querySelectorAll(".issue-item__detail > a");
+  results.forEach(function (result) {
+    let source = result.textContent.trim();
     if (source.length != 0) {
       let names = acm.parseNames(source);
       for (let getRankingSpan of acm.rankingSpanProvider) {
-        result.before(getRankingSpan(names));
+        result.insertAdjacentElement('beforebegin', getRankingSpan(names));
       }
     }
   });
