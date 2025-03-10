@@ -29,7 +29,8 @@ ccf.getRankingInfo = function (names) {
     } else if (ranking == undefined) {
       ranking = "none";
     } else {
-      rankingInfo.info += name.full + ": CCF " + ranking + "\n";
+      name.abbr = ccf.full2abbr[name.full.toLowerCase()];
+      rankingInfo.info += `${name.full} (${name.abbr}): CCF ${ranking}\n`;
     }
     rankingInfo.rankings.push(ranking);
   }
