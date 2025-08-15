@@ -2034,7 +2034,7 @@ ccf.dblp_uri2index = {
   "journals/ijisp": 151,
   "journals/istr": 152,
   "journals/scn": 153,
-  "conf/ccs": 176,
+  "conf/ccs": 154,
   "conf/eurocrypt": 155,
   "conf/sp": 156,
   "conf/crypto": 157,
