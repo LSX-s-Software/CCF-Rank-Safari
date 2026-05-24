@@ -1,17 +1,21 @@
 const dblp = {};
 
 dblp.rankingSpanProvider = [];
+dblp.popstateInited = false;
 
 dblp.start = function () {
   let pathname = window.location.pathname;
-  let title = document.querySelector("head > title").textContent;
+  let title = document.querySelector("head > title")?.textContent || "";
   if (pathname.startsWith("/search?") || title.indexOf("Search for") != -1) {
+    if (!dblp.popstateInited) {
+      window.addEventListener("popstate", function () {
+        dblp.addRankings();
+      });
+      dblp.popstateInited = true;
+    }
     setInterval(function () {
       let message = document.querySelector("#completesearch-publs > div > p.waiting");
-      if (message.style.display == "none") {
-        window.addEventListener("popstate", function () {
-          dblp.addRankings();
-        });
+      if (message == null || message.style.display == "none") {
         dblp.addRankings();
       }
     }, 1000);
@@ -52,11 +56,9 @@ dblp.addRankings = function () {
       let url = result.parentElement.parentElement.getAttribute("href");
       let pathname = url.substring(url.indexOf(location.hostname) + location.hostname.length);
       let uri = dblp.getUriFromPathname(pathname);
-      if (source.length != 0 && (!result.nextElementSibling || !result.nextElementSibling.classList.contains("ccf-ranking"))) {
-        for (let getRankingSpan of dblp.rankingSpanProvider) {
-          let names = dblp.parseNames(source, uri);
-          result.insertAdjacentElement('afterend', getRankingSpan(names));
-        }
+      if (source.length != 0) {
+        let names = dblp.parseNames(source, uri);
+        siteUtil.insertRankingSpans(result, names, dblp.rankingSpanProvider);
       }
     }
   });
@@ -64,12 +66,13 @@ dblp.addRankings = function () {
 
 dblp.addRanking = function (selector, uri) {
   let result = document.querySelector(selector);
+  if (result == null) {
+    return;
+  }
   let source = result.textContent.trim();
   if (source.length != 0) {
-    for (let getRankingSpan of dblp.rankingSpanProvider) {
-      let names = dblp.parseNames(source, uri);
-      result.insertAdjacentElement('afterend', getRankingSpan(names));
-    }
+    let names = dblp.parseNames(source, uri);
+    siteUtil.insertRankingSpans(result, names, dblp.rankingSpanProvider);
   }
 };
 

@@ -12,9 +12,7 @@ springer.addRankings = function () {
     let source = result.getAttribute("title").trim();
     if (source.length != 0) {
       let names = springer.parseNames(source);
-      for (let getRankingSpan of springer.rankingSpanProvider) {
-        result.insertAdjacentElement('beforebegin', getRankingSpan(names));
-      }
+      siteUtil.insertRankingSpans(result, names, springer.rankingSpanProvider, "beforebegin");
     }
   });
 };
@@ -25,7 +23,6 @@ springer.parseNames = function (source) {
   let full;
   source = source.replace("–", "-").replace("--", "-");
   let index = source.lastIndexOf(" - ");
-  console.log("s = " + source + ", index = " + index);
   if (index != -1) {
     abbr = source.substring(index + " – ".length).trim();
     if (!abbr.endsWith("11.9")) {

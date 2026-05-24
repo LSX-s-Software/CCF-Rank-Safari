@@ -14,6 +14,10 @@
     "512": "images/icon-512.png"
   },
 
+  "background": {
+    "scripts": ["background.js"]
+  },
+
   "content_scripts": [
     {
       "run_at": "document_end",
@@ -134,5 +138,5 @@
     }
   },
 
-  "permissions": []
+  "permissions": ["https://dblp.org/*"]
 }

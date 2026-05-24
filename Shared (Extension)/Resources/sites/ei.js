@@ -1,23 +1,33 @@
 const ei = {};
 
 ei.rankingSpanProvider = [];
+ei.pageNavInited = false;
 
 ei.start = function () {
   let interval = setInterval(function () {
     if (!ei.isLoading()) {
       clearInterval(interval);
       // for desktop page select
-      document.querySelector("#page-nav").addEventListener("click", function () {
-        ei.start();
-      });
+      if (!ei.pageNavInited) {
+        let pageNav = document.querySelector("#page-nav");
+        if (pageNav != null) {
+          pageNav.addEventListener("click", function () {
+            ei.start();
+          });
+          ei.pageNavInited = true;
+        }
+      }
       ei.addRankings();
     }
   }, 1000);
 };
 
 ei.isLoading = function () {
+  let evLoading = document.querySelector("#ev-loading");
+  let loadingResults = document.querySelector("#loading-results");
   return (
-    document.querySelector("#ev-loading").style.display !== "none" || document.querySelector("#loading-results").style !== undefined
+    siteUtil.isVisible(evLoading) ||
+    siteUtil.isVisible(loadingResults)
   );
 };
 
@@ -28,12 +38,10 @@ ei.addRankings = function () {
 };
 
 ei.addRanking = function (result) {
-  let source = result.text().trim();
+  let source = result.textContent.trim();
   if (source.length !== 0) {
     let names = ei.parseNames(source);
-    for (let getRankingSpan of ei.rankingSpanProvider) {
-      result.before(getRankingSpan(names));
-    }
+    siteUtil.insertRankingSpans(result, names, ei.rankingSpanProvider, "beforebegin");
   }
 };
 

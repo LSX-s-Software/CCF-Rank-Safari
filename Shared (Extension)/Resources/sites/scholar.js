@@ -27,16 +27,21 @@
 const scholar = {};
 
 scholar.rankSpanList = [];
+scholar.popstateInited = false;
+scholar.rankCache = {};
 
 scholar.run = function () {
   let url = window.location.pathname;
   if (url == "/scholar") {
     scholar.appendRank();
   } else if (url == "/citations") {
-    setInterval(function () {
+    if (!scholar.popstateInited) {
       window.addEventListener("popstate", function () {
         scholar.appendRanks();
       });
+      scholar.popstateInited = true;
+    }
+    setInterval(function () {
       scholar.appendRanks();
     }, 2000);
   }
@@ -46,7 +51,7 @@ scholar.appendRank = function () {
   let elements = document.querySelectorAll("#gs_res_ccl_mid > div > div.gs_ri");
   elements.forEach(function (element) {
     let node = element.querySelector("h3 > a");
-    if (node.nextElementSibling && node.nextElementSibling.classList.contains("ccf-ranking")) {
+    if (node == null || siteUtil.hasRankingSibling(node)) {
       return;
     }
     let title = node.textContent.replace(/[^A-z]/g, " ");
@@ -64,7 +69,7 @@ scholar.appendRanks = function () {
   let elements = document.querySelectorAll("tr.gsc_a_tr");
   elements.forEach(function (element) {
     let node = element.querySelector("td.gsc_a_t > a");
-    if (node.nextElementSibling && node.nextElementSibling.classList.contains("ccf-ranking")) {
+    if (node == null || siteUtil.hasRankingSibling(node)) {
       return;
     }
     let title = node.textContent.replace(/[^A-z]/g, " ");
@@ -78,51 +83,83 @@ scholar.appendRanks = function () {
 };
 
 function fetchRank(node, title, author, year) {
-  const api_format = `https://dblp.org/search/publ/api?q=${encodeURIComponent(title + " " + author)}&format=json`;
-  fetch(api_format)
-    .then((response) => response.json())
-    .then((data) => {
-      let dblp_url = "";
-      const resp = data.result.hits;
-      if (resp == undefined || resp["@total"] == 0) {
-        dblp_url = "";
-      } else if (resp["@total"] == 1) {
-        const url = resp.hit[0].info.url;
-        dblp_url = url.substring(url.indexOf("/rec/") + 5, url.lastIndexOf("/"));
-      } else {
-        for (let hit of resp.hit) {
-          const info = hit.info;
-          if (info.authors.author[0] == undefined) {
-            continue;
-          }
-          const author_1st = info.authors.author[0].text;
-          const year_fuzzy = info.year;
-          let year_last_check = 0;
-          if (
-            Math.abs(Number(year) - year_fuzzy) <= 1 &&
-            author_1st.toLowerCase().split(" ").indexOf(author.toLowerCase()) != -1 &&
-            year_fuzzy != year_last_check
-          ) {
-            year_last_check = year_fuzzy;
-            const url = info.url;
-            const dblp_url_last_check = url.substring(url.indexOf("/rec/") + 5, url.lastIndexOf("/"));
-            if (year_fuzzy == year + 1) {
-              dblp_url = dblp_url_last_check;
-            } else if (year_fuzzy == year) {
-              dblp_url = dblp_url_last_check;
-              break;
-            } else {
-              if (dblp_url == "") {
-                dblp_url = dblp_url_last_check;
-              }
-            }
-          }
-        }
-      }
-      const names = [{ uri: dblp_url }];
-      for (let getRankSpan of scholar.rankSpanList) {
-        node.insertAdjacentElement("afterend", getRankSpan(names));
-      }
+  const query = `${title.trim()} ${author || ""}`.trim();
+  const cacheKey = `${query}|${year || ""}`.toLowerCase();
+
+  if (siteUtil.hasRankingSibling(node) || node.dataset.ccfRankStatus == "loading") {
+    return;
+  }
+
+  if (scholar.rankCache[cacheKey] != undefined) {
+    scholar.insertRank(node, scholar.rankCache[cacheKey]);
+    return;
+  }
+
+  node.dataset.ccfRankStatus = "loading";
+  scholar.fetchDblpUri(query, author, year)
+    .then(function (dblpUri) {
+      scholar.rankCache[cacheKey] = dblpUri;
+      scholar.insertRank(node, dblpUri);
     })
-    .catch((error) => console.error("Error fetching rank:", error));
+    .catch(function () {
+      scholar.rankCache[cacheKey] = "";
+      scholar.insertRank(node, "");
+    });
 }
+
+scholar.fetchDblpUri = function (query, author, year) {
+  return browser.runtime
+    .sendMessage({ type: "fetchDblpPublication", query: query })
+    .then(function (data) {
+      return scholar.findDblpUri(data, author, year);
+    });
+};
+
+scholar.findDblpUri = function (data, author, year) {
+  const resp = data.result.hits;
+  const authorText = (author || "").toLowerCase();
+  const targetYear = Number(year);
+  if (resp == undefined || resp["@total"] == 0) {
+    return "";
+  }
+  if (resp["@total"] == 1) {
+    return scholar.extractDblpUri(resp.hit[0].info.url);
+  }
+
+  let fallbackUri = "";
+  let yearLastCheck = 0;
+  for (let hit of resp.hit) {
+    const info = hit.info;
+    if (info.authors.author[0] == undefined) {
+      continue;
+    }
+    const author_1st = info.authors.author[0].text;
+    const year_fuzzy = Number(info.year);
+    if (
+      Math.abs(targetYear - year_fuzzy) <= 1 &&
+      authorText.length != 0 &&
+      author_1st.toLowerCase().split(" ").indexOf(authorText) != -1 &&
+      year_fuzzy != yearLastCheck
+    ) {
+      yearLastCheck = year_fuzzy;
+      const uri = scholar.extractDblpUri(info.url);
+      if (year_fuzzy == targetYear + 1) {
+        fallbackUri = uri;
+      } else if (year_fuzzy == targetYear) {
+        return uri;
+      } else if (fallbackUri == "") {
+        fallbackUri = uri;
+      }
+    }
+  }
+  return fallbackUri;
+};
+
+scholar.extractDblpUri = function (url) {
+  return url.substring(url.indexOf("/rec/") + 5, url.lastIndexOf("/"));
+};
+
+scholar.insertRank = function (node, dblpUri) {
+  delete node.dataset.ccfRankStatus;
+  siteUtil.insertRankingSpans(node, [{ uri: dblpUri }], scholar.rankSpanList);
+};

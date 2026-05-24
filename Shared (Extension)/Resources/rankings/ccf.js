@@ -5,7 +5,6 @@ ccf.getRankingInfo = function (names) {
   rankingInfo.rankings = [];
   rankingInfo.info = "";
   for (let name of names) {
-    console.log(name);
     let ranking;
     if (ccf.custom2rank != undefined) {
       ranking = ccf.custom2rank(name);
